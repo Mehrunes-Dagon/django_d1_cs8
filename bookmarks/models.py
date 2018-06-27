@@ -12,5 +12,5 @@ class Bookmark(models.Model):
     last_modified = models.DateTimeField(auto_now=True)
 
 
-class PersonalBookmark(Note):
+class PersonalBookmark(Bookmark):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
